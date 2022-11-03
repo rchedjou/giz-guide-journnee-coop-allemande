@@ -20,92 +20,29 @@ app.use(cors());
 
 
 const db = require('./models');
+const { Journee } = require("./models");
 
 // Configuring body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-//Routes basique sur journéé=e
-app.get('/journee', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
-app.post('/journee', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
-app.delete('/journee', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
-app.patch('/journee', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
+//END POINTS
+//ROUTER
+const journeeRouter = require("./routes/Journee");
+app.use("/journee", journeeRouter);
 
-//Routes basiques evement
-app.get('/evenement', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
-app.post('/evenement', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
-app.delete('/evenement', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
-app.patch('/evenement', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
+const evenementsRouter = require("./routes/Evenements");
+app.use(evenementsRouter);
 
+const lieuxRouter = require("./routes/Lieux");
+app.use(lieuxRouter);
 
-//Routes basiques commentaire
-app.get('/commentaire', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
-app.post('/commentaire', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
-app.delete('/commentaire', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
-app.patch('/commentaire', (req, res, next) => {
-    console.log("reque reçu");
-    res.status(200).json({
-        message: 'Requete reçu !'
-  });
-});
+const photosRouter = require("./routes/Photos");
+app.use(photosRouter);
 
-
+const commentairesRouter = require("./routes/Commentaires");
+app.use(commentairesRouter);
 
 db.sequelize.sync({force: false }).then(()=>{
     app.listen(PORT, ()=>{
