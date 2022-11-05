@@ -1,0 +1,36 @@
+{
+    "grand_menu" : {
+        "app_menu" : "App Menus",
+        "question" : "Questions"
+    },
+    "menu" : {
+        "accueil" : "Accueil",
+        "agenda" : "Agenda",
+        "carte" : "Carte",
+        "dossier_presse" : "Dossier Presse",
+        "faq" : "FAQs",
+        "a_propos" : "À Propos"
+    },
+    "pages" : {
+        "accueil" : {
+            "bienvenu" : "Bienvenue Accueil"
+        },
+        "agenda" : {
+            "bienvenu" : "Bienvenue Agenda"
+        },
+        "dossier_presse" : {
+            "bienvenu" : "Bienvenue Dossier Presse"
+        },
+        "carte" : {
+            "bienvenu" : "Bienvenue Carte"
+        },
+        "faq" : {
+            "bienvenu" : "Bienvenue Faq"
+        },
+        "a_propos" : {
+            "bienvenu" : "Bienvenue A Propos"
+        }
+    }
+
+
+}
