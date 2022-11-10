@@ -23,11 +23,13 @@ module.exports = (sequelize, DataTypes)=>{
             allowNull : true
         },
         likes:{
-            type:DataTypes.TEXT,
+            type:DataTypes.INTEGER,
+            default:0,
             allowNull:true
         },
         dislikes:{
-            type:DataTypes.TEXT,
+            type:DataTypes.INTEGER,
+            default:0,
             allowNull:true
         }
     });

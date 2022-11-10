@@ -5,3 +5,4 @@ __pycache__
 env/
 client-giz-guide/node_modules/
 server-giz-guide/node_modules/
+server/node_modules
