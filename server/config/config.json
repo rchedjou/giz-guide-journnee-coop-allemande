@@ -3,8 +3,9 @@
     "username": "root",
     "password": null,
     "database": "giz_guide",
-    "host": "localhost",
-    "dialect": "mysql"
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases":0
   },
   "test": {
     "username": "root",

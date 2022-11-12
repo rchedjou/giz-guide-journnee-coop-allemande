@@ -92,7 +92,7 @@ L'API renvoie deux types d'erreur lorsque les demandes échouent :
 le nom de la brache git par défaut est : `initiale`
 
 ## Authors
-CHEDJOU SOFFO Rocelin & KONGNE FAH Eric
+CHEDJOU SOFFO Rocelin & KONGNE FAH Erick
 
 ## Acknowledgements 
 L'équipe formidable de la GIZ.
