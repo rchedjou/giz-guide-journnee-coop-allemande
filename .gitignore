@@ -2,6 +2,7 @@
 __pycache__
 ._*
 .Trashes
+.*
 env/
-client-giz-guide/node_modules/
-server-giz-guide/node_modules/
+client-giz-guide/node_modules
+server-giz-guide/node_modules
