@@ -1,0 +1,26 @@
+@import "variables";
+
+span {
+  &.flag-icon {
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 1em;
+    height: 1em;
+    width: (21 / 15) * 1em;
+    background-image: url(#{$flag-icons-path}/missing.svg);
+
+    &:before {
+      content: '\00a0';
+    }
+
+    // Flags
+    @each $element in $flag-icons-elements {
+      &.flag-icon-#{$element} {
+        background-image: url(#{$flag-icons-path}/#{$element}.svg);
+      }
+    }
+  }
+}
