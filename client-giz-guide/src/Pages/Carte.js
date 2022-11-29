@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import MainCard from "../Composants/MainCard";
+import Svggiz from "../Composants/Svg_giz";
 
 const Carte = () => {
   return (
-    <div>
-      bonjour Carte
-    </div>
+    <MainCard title="Sample Card" >
+        <Svggiz />
+    </MainCard>
   )
 }
 

@@ -1,0 +1,9 @@
+.svg_map path{
+    fill: #fafafa!important;
+    stroke: rgb(179, 38, 38);
+    stroke-width: 2px;
+}
+.svg_map path:hover{
+    fill: #23f707 !important;
+    transition: fill 0.3ms;
+}

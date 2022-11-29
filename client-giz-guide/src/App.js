@@ -14,22 +14,23 @@ import Apropos from './Pages/Apropos';
 
 
 function App() {
-	const [title, setTitle] = useState("accueil");
-	const [content, setContent] = useState(Accueil);
+	const [title, setTitle] = useState("Map");
+	const [content, setContent] = useState(Carte);
 	const location = useLocation();
 	const { t } = useTranslation();
 	
 
 	useEffect(()=>{
-		//console.log(location.pathname);
+		console.log(location.pathname);
 		const parseTitle = location.pathname.replace(/\W/g, '');
-
+		
 		if(parseTitle==="accueil"){
 			const titre = t('menu.accueil');
 			setTitle(titre);
 			setContent(Accueil);
 		}
 		if(parseTitle==="agenda"){
+			//console.log("chedjou soffo");
 			const titre = t('menu.agenda');
 			setTitle(titre);
 			setContent(Agenda);
@@ -52,6 +53,9 @@ function App() {
 		if(parseTitle==="apropos"){
 			setTitle("À Propos");
 			setContent(Apropos);
+		}
+		return ()=>{
+
 		}
 		
 	  }, [location, t]);
